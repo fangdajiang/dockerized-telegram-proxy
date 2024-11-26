@@ -24,7 +24,7 @@ RUN groupadd -r mtproxy && useradd -r -g mtproxy -d /MTProxy -s /bin/false mtpro
 RUN chown -R mtproxy:mtproxy /MTProxy
 
 # Expose ports (Assuming default settings, modify as needed)
-EXPOSE 443
+EXPOSE 3389
 EXPOSE 8888
 
 # Entry point script
@@ -34,4 +34,4 @@ RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Command to run MTProxy - The actual secrets and configurations are handled in the entrypoint script.
-CMD ["./mtproto-proxy", "-u", "mtproxy", "-p", "8888", "-H", "443", "--aes-pwd", "proxy-secret", "proxy-multi.conf", "-M", "1"]
+CMD ["./mtproto-proxy", "-u", "mtproxy", "-p", "8888", "-H", "3389", "--aes-pwd", "proxy-secret", "proxy-multi.conf", "-M", "1"]
