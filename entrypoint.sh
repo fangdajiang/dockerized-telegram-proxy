@@ -24,4 +24,4 @@ echo "=========================================="
 echo $SECRET > /MTProxy/secret.txt
 
 # Start the MTProxy with the secret (and any additional parameters passed to docker run)
-/MTProxy/objs/bin/mtproto-proxy --aes-pwd /MTProxy/proxy-secret /MTProxy/proxy-multi.conf -M 1 -P ${TAG-"417b95b73907ce533fdeaff5c7ac2a3c"} -S $SECRET -p 8888 -H 443
+/MTProxy/objs/bin/mtproto-proxy --aes-pwd /MTProxy/proxy-secret /MTProxy/proxy-multi.conf -M 1 -P ${TAG-"417b95b73907ce533fdeaff5c7ac2a3c"} -S $SECRET -p 8888 -H 3389
