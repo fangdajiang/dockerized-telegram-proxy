@@ -13,7 +13,7 @@ RUN apt update && \
     rm -rf /var/lib/apt/lists/*
 
 # Clone the MTProxy repository
-RUN git clone https://github.com/TelegramMessenger/MTProxy . && \
+RUN git clone https://github.com/TelegramMessenger/MTProxy --depth=1 . && \
     make && \
     cd objs/bin
 
