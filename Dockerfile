@@ -23,6 +23,8 @@ RUN groupadd -r mtproxy && useradd -r -g mtproxy -d /MTProxy -s /bin/false mtpro
 # Change ownership of the MTProxy directory
 RUN chown -R mtproxy:mtproxy /MTProxy
 
+ENV MT_PROXY_SECRET=3c89401ee31e9fa2027f7f90f23d6576
+
 # Expose ports (Assuming default settings, modify as needed)
 EXPOSE 3389
 EXPOSE 8888
