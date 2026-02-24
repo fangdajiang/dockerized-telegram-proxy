@@ -34,4 +34,4 @@ RUN chmod +x /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
 
 # Command to run MTProxy - The actual secrets and configurations are handled in the entrypoint script.
-CMD ["./mtproto-proxy", "-u", "mtproxy", "-p", "8888", "-H", "13389", "--aes-pwd", "proxy-secret", "proxy-multi.conf", "-M", "1"]
+CMD ["./mtproto-proxy", "-u", "mtproxy", "-p", "8888", "-H", "23389", "--aes-pwd", "proxy-secret", "proxy-multi.conf", "-M", "1"]
